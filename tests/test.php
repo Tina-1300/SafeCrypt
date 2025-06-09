@@ -3,11 +3,15 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use SafeCrypt\Protocole\AESGCM;
 
-//$key = random_bytes(32);
 
-//file_put_contents('aes_key.txt', base64_encode($key));
+if(file_exists("./aes_key.txt") != true){
+    $key = random_bytes(32);
+    file_put_contents('aes_key.txt', base64_encode($key));
+}
+
 
 $keyFromFile = base64_decode(file_get_contents('aes_key.txt'));
+
 
 $aes = new AESGCM($keyFromFile);
 
