@@ -9,3 +9,7 @@ You can install SafeCrypt via `composer` :
 ```bash
 composer require tina-1300/safecrypt
 ```
+
+## 🚀 Use
+
+[AES-GCM](./docs/Aes_gcm.md)
