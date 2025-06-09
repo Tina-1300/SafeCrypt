@@ -1,0 +1,20 @@
+{
+    "name": "tina-1300/safecrypt", 
+    "description": "SafeCrypt is a PHP library that makes cryptography easier to manage by providing a wrapper for OpenSSL so that even novices can use cryptography.",
+    "type": "library", 
+    "license": "MIT", 
+    "authors": [
+        {
+            "name": "Tina-1300",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.4.7" 
+    },
+    "autoload": {
+        "psr-4": {
+            "SafeCrypt\\": "src/"
+        }
+    }
+}
