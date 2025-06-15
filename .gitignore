@@ -1,0 +1,7 @@
+
+test/vendor/
+test/composer.json
+test/composer.lock
+test/test.bat
+
+test/tests/keys/
