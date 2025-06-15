@@ -10,4 +10,8 @@ return array(
     'SafeCrypt\\Exceptions\\CryptoException' => $baseDir . '/src/Exceptions/CryptoException.php',
     'SafeCrypt\\Interfaces\\CipherInterface' => $baseDir . '/src/Interfaces/CipherInterface.php',
     'SafeCrypt\\Protocole\\AESGCM' => $baseDir . '/src/Protocole/AESGCM.php',
+    'SafeCrypt\\Protocole\\RSA' => $baseDir . '/src/Protocole/RSA.php',
+    'SafeCrypt\\Protocole\\RSAKey' => $baseDir . '/src/Protocole/RSAKey.php',
+    'SafeCrypt\\Protocole\\RSALoad' => $baseDir . '/src/Protocole/RSALoad.php',
+    'SafeCrypt\\Protocole\\RSASave' => $baseDir . '/src/Protocole/RSASave.php',
 );

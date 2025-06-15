@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc276b9d6e3eacc52091638379c9fc28d
+class ComposerStaticInit932f87e7fd4407f154e8fa866675e2aa
 {
     public static $prefixLengthsPsr4 = array (
         'S' => 
@@ -25,14 +25,18 @@ class ComposerStaticInitc276b9d6e3eacc52091638379c9fc28d
         'SafeCrypt\\Exceptions\\CryptoException' => __DIR__ . '/../..' . '/src/Exceptions/CryptoException.php',
         'SafeCrypt\\Interfaces\\CipherInterface' => __DIR__ . '/../..' . '/src/Interfaces/CipherInterface.php',
         'SafeCrypt\\Protocole\\AESGCM' => __DIR__ . '/../..' . '/src/Protocole/AESGCM.php',
+        'SafeCrypt\\Protocole\\RSA' => __DIR__ . '/../..' . '/src/Protocole/RSA.php',
+        'SafeCrypt\\Protocole\\RSAKey' => __DIR__ . '/../..' . '/src/Protocole/RSAKey.php',
+        'SafeCrypt\\Protocole\\RSALoad' => __DIR__ . '/../..' . '/src/Protocole/RSALoad.php',
+        'SafeCrypt\\Protocole\\RSASave' => __DIR__ . '/../..' . '/src/Protocole/RSASave.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc276b9d6e3eacc52091638379c9fc28d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc276b9d6e3eacc52091638379c9fc28d::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitc276b9d6e3eacc52091638379c9fc28d::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit932f87e7fd4407f154e8fa866675e2aa::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit932f87e7fd4407f154e8fa866675e2aa::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit932f87e7fd4407f154e8fa866675e2aa::$classMap;
 
         }, null, ClassLoader::class);
     }

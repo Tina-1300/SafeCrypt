@@ -17,3 +17,4 @@ composer require tina-1300/safecrypt
 ## Example
 
 [AES-GCM File encryption example](./example/File_encryption_example_aes_gcm.md)
+[RSA example](./example/RSA_example.md)
