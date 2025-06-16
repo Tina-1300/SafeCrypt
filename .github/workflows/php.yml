@@ -1,0 +1,42 @@
+name: PHP CI
+
+on:
+  push:
+    branches: [ "main", "dev" ]
+  pull_request:
+    branches: [ "main", "dev" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php-version: [ '8.4.7' ]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP ${{ matrix.php-version }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          coverage: none
+
+      - name: Show PHP version
+        run: php -v
+
+      - name: Cache composer dependencies
+        uses: actions/cache@v3
+        with:
+          path: test/vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('test/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Make PHPUnit executable
+        run: chmod +x test/vendor/bin/phpunit
+
+      - name: Run PHPUnit tests
+        run: test/vendor/bin/phpunit test/tests/
