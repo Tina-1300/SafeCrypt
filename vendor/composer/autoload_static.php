@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInite01cb7ce18a1216c742519581591b0b0
+class ComposerStaticInit32357e8676f267c9b896473e559d8383
 {
     public static $prefixLengthsPsr4 = array (
         'S' => 
@@ -25,6 +25,10 @@ class ComposerStaticInite01cb7ce18a1216c742519581591b0b0
         'SafeCrypt\\Exceptions\\CryptoException' => __DIR__ . '/../..' . '/src/Exceptions/CryptoException.php',
         'SafeCrypt\\Interfaces\\CipherInterface' => __DIR__ . '/../..' . '/src/Interfaces/CipherInterface.php',
         'SafeCrypt\\Protocole\\AESGCM' => __DIR__ . '/../..' . '/src/Protocole/AESGCM.php',
+        'SafeCrypt\\Protocole\\ChaCha20' => __DIR__ . '/../..' . '/src/Protocole/ChaCha20.php',
+        'SafeCrypt\\Protocole\\ChaCha20Key' => __DIR__ . '/../..' . '/src/Protocole/ChaCha20Key.php',
+        'SafeCrypt\\Protocole\\ChaCha20Load' => __DIR__ . '/../..' . '/src/Protocole/ChaCha20Load.php',
+        'SafeCrypt\\Protocole\\ChaCha20Save' => __DIR__ . '/../..' . '/src/Protocole/ChaCha20Save.php',
         'SafeCrypt\\Protocole\\RSA' => __DIR__ . '/../..' . '/src/Protocole/RSA.php',
         'SafeCrypt\\Protocole\\RSAKey' => __DIR__ . '/../..' . '/src/Protocole/RSAKey.php',
         'SafeCrypt\\Protocole\\RSALoad' => __DIR__ . '/../..' . '/src/Protocole/RSALoad.php',
@@ -34,9 +38,9 @@ class ComposerStaticInite01cb7ce18a1216c742519581591b0b0
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInite01cb7ce18a1216c742519581591b0b0::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInite01cb7ce18a1216c742519581591b0b0::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInite01cb7ce18a1216c742519581591b0b0::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit32357e8676f267c9b896473e559d8383::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit32357e8676f267c9b896473e559d8383::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit32357e8676f267c9b896473e559d8383::$classMap;
 
         }, null, ClassLoader::class);
     }

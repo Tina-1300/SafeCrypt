@@ -19,10 +19,12 @@ final class RSATest extends TestCase {
         $this->publicPath = $this->keyDir . '/public.pem';
         $this->privatePath = $this->keyDir . '/private.pem';
 
+        /*
         fwrite(STDOUT, PHP_EOL);
         fwrite(STDOUT, "==========================================" . PHP_EOL);
         fwrite(STDOUT, "     UNIT TEST : RSA ENCRYPTION/DECRYPTION" . PHP_EOL);
         fwrite(STDOUT, "==========================================" . PHP_EOL . PHP_EOL);
+        */
 
         if (!file_exists($this->keyDir)) {
             mkdir($this->keyDir, 0777, true);
@@ -30,11 +32,11 @@ final class RSATest extends TestCase {
 
         try {
             if (file_exists($this->publicPath) && file_exists($this->privatePath)) {
-                fwrite(STDOUT, "Chargement des clés existantes..." . PHP_EOL);
+                //fwrite(STDOUT, "Chargement des clés existantes..." . PHP_EOL);
                 $publicKey = file_get_contents($this->publicPath);
                 $privateKey = file_get_contents($this->privatePath);
             } else {
-                fwrite(STDOUT, "Génération des clés RSA (1024 bits)..." . PHP_EOL);
+                //fwrite(STDOUT, "Génération des clés RSA (1024 bits)..." . PHP_EOL);
                 $keyGen = new RSAKey();
                 $keys = $keyGen->generated(1024);
 
@@ -44,7 +46,7 @@ final class RSATest extends TestCase {
                 $publicKey = $keys['public'];
                 $privateKey = $keys['private'];
 
-                fwrite(STDOUT, "Clés générées et sauvegardées." . PHP_EOL);
+                //fwrite(STDOUT, "Clés générées et sauvegardées." . PHP_EOL);
             }
 
             $this->rsa = new RSA($publicKey, $privateKey);
@@ -58,22 +60,25 @@ final class RSATest extends TestCase {
     public function testEncryptDecrypt(): void {
         $message = "Mon message secret";
 
-        fwrite(STDOUT, PHP_EOL);
-        fwrite(STDOUT, "Message original : $message" . PHP_EOL);
+        //fwrite(STDOUT, PHP_EOL);
+        //fwrite(STDOUT, "Message original : $message" . PHP_EOL);
 
         $encrypted = $this->rsa->encrypt($message);
-        fwrite(STDOUT, "Chiffré          : $encrypted" . PHP_EOL);
+        //fwrite(STDOUT, "Chiffré          : $encrypted" . PHP_EOL);
 
         $decrypted = $this->rsa->decrypt($encrypted);
-        fwrite(STDOUT, "Déchiffré        : $decrypted" . PHP_EOL);
+        //fwrite(STDOUT, "Déchiffré        : $decrypted" . PHP_EOL);
 
         $this->assertSame($message, $decrypted, "Le message déchiffré ne correspond pas au message original.");
 
+        /*
         fwrite(STDOUT, PHP_EOL);
         fwrite(STDOUT, "Test RSA réussi : le message a été correctement déchiffré." . PHP_EOL);
 
         fwrite(STDOUT, PHP_EOL);
         fwrite(STDOUT, "FIN DU TEST RSA" . PHP_EOL);
         fwrite(STDOUT, "------------------------------------------" . PHP_EOL . PHP_EOL);
+        */
     }
+
 }

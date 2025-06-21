@@ -28,8 +28,9 @@ This document describes the features planned for future versions of the SafeCryp
 
 ## 🚧 Version `v1.3.0` – Addition of new symmetric protocols
 
-- [ ] ChaCha20-Poly1305 encryption
-- [ ] ChaCha20 + Poly1305 MAC implementation
+- [X] ChaCha20-Poly1305 encryption
+- [X] ChaCha20 + Poly1305 MAC implementation
+- [ ] Documentation
 > Fast and secure alternative to AES-GCM, ideal for mobile devices
 
 ---

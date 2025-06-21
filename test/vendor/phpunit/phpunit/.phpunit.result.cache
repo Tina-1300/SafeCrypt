@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"AESGCMTest::testEncryptDecrypt":0.058,"RSATest::testEncryptDecrypt":0.028}}
+{"version":1,"defects":[],"times":{"AESGCMTest::testEncryptDecrypt":0.012,"RSATest::testEncryptDecrypt":0.014}}
