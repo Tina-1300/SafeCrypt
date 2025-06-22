@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tina" />
       <link rel="shortcut icon" href="/img/favicon.ico" />
-    <title>WinSpeak</title>
+    <title>SafeCrypt</title>
     <link rel="stylesheet" href="/css/theme.css" />
     <link rel="stylesheet" href="/css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -15,7 +15,7 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/php.min.js"></script>
       <script>hljs.highlightAll();</script> 
 </head>
 
@@ -25,7 +25,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="/index.html" class="icon icon-home"> WinSpeak
+          <a href="/index.html" class="icon icon-home"> SafeCrypt
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="//search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -35,22 +35,33 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="/index.html">Welcome</a>
+                <li class="toctree-l1"><a class="reference internal" href="/index.html">Introduction</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Documentation</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="/installation.html">Installation</a>
+                <li class="toctree-l1"><a class="reference internal" href="/installation.html">Installation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="/api/rsa.html">RSA</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="/features/features.html">Features</a>
+                  <li class="toctree-l1"><a class="reference internal" href="/api/aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="/api/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Example</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="/example/rsa.html">RSA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="/example/aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="/example/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">About</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="/announcements.html">Announcements</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="/about/team.html">The team</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="/about/contributing.html">Contribute</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="/about/license.html">Licence</a>
@@ -63,7 +74,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="/about/ROADMAP.html">Roadmap</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="/FAQ.html">FAQ</a>
+                  <li class="toctree-l1"><a class="reference internal" href="/about/FAQ.html">FAQ</a>
                   </li>
               </ul>
       </div>
@@ -73,7 +84,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="/index.html">WinSpeak</a>
+          <a href="/index.html">SafeCrypt</a>
         
       </nav>
       <div class="wy-nav-content">

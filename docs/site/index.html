@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Official SafeCrypt Documentation" /><meta name="author" content="Tina" />
       <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>WinSpeak</title>
+    <title>SafeCrypt</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Welcome";
+        var mkdocs_page_name = "Introduction";
         var mkdocs_page_input_path = "index.md";
         var mkdocs_page_url = null;
       </script>
@@ -22,7 +22,7 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/php.min.js"></script>
       <script>hljs.highlightAll();</script> 
 </head>
 
@@ -32,7 +32,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="index.html" class="icon icon-home"> WinSpeak
+          <a href="index.html" class="icon icon-home"> SafeCrypt
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -42,32 +42,37 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Welcome</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Introduction</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation :</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#contributors">Contributors :</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#support-for-other-projects">Support for other projects :</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#information">Information</a>
+    <li class="toctree-l2"><a class="reference internal" href="#support-the-project">⭐ Support the Project</a>
     </li>
     </ul>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Documentation</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a>
+                <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="api/rsa.html">RSA</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="features/features.html">Features</a>
+                  <li class="toctree-l1"><a class="reference internal" href="api/aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="api/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Example</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="example/rsa.html">RSA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="example/aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="example/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">About</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="announcements.html">Announcements</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="about/team.html">The team</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="about/contributing.html">Contribute</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="about/license.html">Licence</a>
@@ -80,7 +85,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="about/ROADMAP.html">Roadmap</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a>
+                  <li class="toctree-l1"><a class="reference internal" href="about/FAQ.html">FAQ</a>
                   </li>
               </ul>
       </div>
@@ -90,14 +95,14 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">WinSpeak</a>
+          <a href="index.html">SafeCrypt</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="index.html" class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Welcome</li>
+      <li class="breadcrumb-item active">Introduction</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -106,16 +111,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="winspeak">WinSpeak</h1>
+                <h1 id="safecrypt">SafeCrypt</h1>
+<p><a href="https://github.com/tina-1300/SafeCrypt"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-Repository-black?logo=github&amp;style=flat" /></a>
+<a href="https://www.php.net/"><img alt="PHP" src="https://img.shields.io/badge/PHP-%3E=8.4.7-777BB4?logo=php&amp;style=flat" /></a>
+<a href="https://getcomposer.org/"><img alt="Composer" src="https://img.shields.io/badge/Composer-v2.8.9-1C1C1C?logo=composer&amp;logoColor=white&amp;style=flat" /></a>
+<a href="https://packagist.org/packages/tina-1300/safecrypt"><img alt="Packagist" src="https://img.shields.io/packagist/v/tina-1300/safecrypt?style=flat" /></a>
+<a href="https://github.com/Tina-1300/SafeCrypt/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg" /></a></p>
+<p><a href="https://github.com/tina-1300/SafeCrypt/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/tina-1300/SafeCrypt?style=social" /></a></p>
 <!--<img src="logo.png" alt="logo" style="width: 90px; height: auto;">-->
 
 <hr />
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This project is only available on Windows.</p>
+<p><strong>SafeCrypt</strong> is a modern PHP library that simplifies the use of cryptography via OpenSSL.</p>
+<p>Currently <strong>SafeCrypt</strong> supports the following protocols :</p>
+<ul>
+<li>🔐 RSA (asymmetric)</li>
+<li>🔒 AES-GCM (symmetric, secure)</li>
+<li>🌀 ChaCha20-Poly1305 (Fast and Safe Symmetric)</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>✨ Ideal for developers who want to use cryptography without getting bogged down in the technical details of OpenSSL.</p>
 </div>
+<p><strong>See <a href="installation.html">Installation</a> to get started</strong>.</p>
+<hr />
+<h2 id="support-the-project">⭐ Support the Project</h2>
+<p>If you find <strong>SafeCrypt</strong> useful, please consider giving it a <strong>star</strong> 🌟 on <a href="https://github.com/tina-1300/SafeCrypt">GitHub</a> – your support means a lot!</p>
 <!-- 
-
+> [!WARNING]
+> This project is only available on Windows.
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
 
@@ -130,35 +153,7 @@
 
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
-
 -->
-
-<p><br></p>
-<p>Welcome to the WinSpeak Library Documentation : </p>
-<p>WinSpeak is a modern, powerful, and easy-to-use C++ library for controlling speakers in Windows. It allows you to manage volume, mute/unmute speakers, and query audio status simply, quickly, and securely.</p>
-<p><br></p>
-<h2 id="documentation">Documentation :</h2>
-<ul>
-<li><a href="features/features.html">WinSpeak Documentation (1.1.0)</a></li>
-</ul>
-<p><br></p>
-<h2 id="contributors">Contributors :</h2>
-<ul>
-<li><strong>Creator of the library</strong> : Tina</li>
-</ul>
-<p><br></p>
-<h2 id="support-for-other-projects">Support for other projects :</h2>
-<ul>
-<li><a href="https://www.opencve.io">OpenCVE</a></li>
-</ul>
-<p><br></p>
-<h2 id="information">Information</h2>
-<ul>
-<li><strong>Author</strong> : Tina</li>
-<li><strong>Date</strong> : 20/05/2025</li>
-<li><strong>Version</strong> : 1.1.0</li>
-<li><strong>Copyright</strong> : 2025 Tina - All rights reserved</li>
-</ul>
               
             </div>
           </div><footer>
@@ -207,5 +202,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-05-19 22:10:03.602407+00:00
+Build Date UTC : 2025-06-22 12:23:51.198889+00:00
 -->

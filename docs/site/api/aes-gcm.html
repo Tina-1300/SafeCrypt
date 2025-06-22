@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tina" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Features - WinSpeak</title>
+    <title>AES-GCM - SafeCrypt</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Features";
-        var mkdocs_page_input_path = "features\\features.md";
+        var mkdocs_page_name = "AES-GCM";
+        var mkdocs_page_input_path = "api\\aes-gcm.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -22,7 +22,7 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/php.min.js"></script>
       <script>hljs.highlightAll();</script> 
 </head>
 
@@ -32,7 +32,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../index.html" class="icon icon-home"> WinSpeak
+          <a href="../index.html" class="icon icon-home"> SafeCrypt
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -42,26 +42,43 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Documentation</span></p>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="rsa.html">RSA</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Features</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">AES-GCM</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#method-of-the-winspeak-class">Method of the WinSpeak class</a>
+    <li class="toctree-l2"><a class="reference internal" href="#main-features">🔐 Main features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#api-classes-and-methods">🧱 API - Classes and Methods</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example">🚀 Example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#safety-notes">⚠️ Safety Notes</a>
     </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Example</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/rsa.html">RSA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">About</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../announcements.html">Announcements</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../about/team.html">The team</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../about/contributing.html">Contribute</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../about/license.html">Licence</a>
@@ -74,7 +91,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../about/ROADMAP.html">Roadmap</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">FAQ</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/FAQ.html">FAQ</a>
                   </li>
               </ul>
       </div>
@@ -84,15 +101,15 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">WinSpeak</a>
+          <a href="../index.html">SafeCrypt</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Documentation</li>
-      <li class="breadcrumb-item active">Features</li>
+          <li class="breadcrumb-item">API</li>
+      <li class="breadcrumb-item active">AES-GCM</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -101,40 +118,70 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="documentation-winspeak">Documentation : WinSpeak</h1>
-<h3 id="method-of-the-winspeak-class">Method of the WinSpeak class</h3>
+                <h1 id="safecrypt-aes-gcm">SafeCrypt - AES-GCM</h1>
+<p>SafeCrypt implements the AES-GCM algorithm, a symmetric encryption protocol that allows for the secure encryption of very large data.</p>
+<hr />
+<h2 id="main-features">🔐 Main features</h2>
+<ul>
+<li>key generation</li>
+<li>encryption</li>
+<li>decryption</li>
+<li>Key size support: 256 bits</li>
+</ul>
+<h2 id="api-classes-and-methods">🧱 API - Classes and Methods</h2>
 <table>
 <thead>
 <tr>
-<th>Method name</th>
-<th>Documentation</th>
+<th>Array</th>
+<th>Class</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>get_volume()</code></td>
-<td><a href="get_volume.html">get_volume.md</a></td>
-</tr>
-<tr>
-<td><code>set_volume()</code></td>
-<td><a href="set_volume.html">set_volume.md</a></td>
-</tr>
-<tr>
-<td><code>is_muted()</code></td>
-<td><a href="is_muted.html">is_muted.md</a></td>
-</tr>
-<tr>
-<td><code>set_mute()</code></td>
-<td><a href="set_mute.html">set_mute.md</a></td>
+<td>1</td>
+<td>AESGCM(string $key)</td>
 </tr>
 </tbody>
 </table>
+<table>
+<thead>
+<tr>
+<th>Array</th>
+<th>method</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>encrypt(string $plaintext)</td>
+<td>allows you to encrypt data</td>
+</tr>
+<tr>
+<td>1</td>
+<td>decrypt(string $ciphertext, string $iv, string $tag)</td>
+<td>allows you to decrypt data</td>
+</tr>
+<tr>
+<td>1</td>
+<td>decryptCombined(string $combinedData)</td>
+<td>makes decrypting data much easier</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">🚀 Example</h2>
+<p>Below I put a link allowing you to look at the code examples : </p>
+<p><a href="../example/aes-gcm.html">example-aes-gcm</a></p>
+<h2 id="safety-notes">⚠️ Safety Notes</h2>
+<ul>
+<li>Never expose the key.</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../installation.html" class="btn btn-neutral float-left" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../announcements.html" class="btn btn-neutral float-right" title="Announcements">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="rsa.html" class="btn btn-neutral float-left" title="RSA"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="ChaCha20-Poly1305.html" class="btn btn-neutral float-right" title="ChaCha20-Poly1305">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -157,10 +204,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../installation.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="rsa.html" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../announcements.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="ChaCha20-Poly1305.html" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

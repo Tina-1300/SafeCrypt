@@ -7,6 +7,14 @@ and versioning follows [SemVer](https://semver.org/lang/fr/).
 
 ---
 
+## [1.3.0] - 2025-06-22
+### Added
+- Documentation
+- ChaCha20-Poly1305
+
+
+---
+
 ## [1.2.0] - 2025-06-15
 ### Added
 - Implementation of the RSA asymmetric encryption protocol

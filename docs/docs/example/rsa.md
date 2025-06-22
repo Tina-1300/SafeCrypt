@@ -1,4 +1,6 @@
-# RSA example
+# RSA Example
+
+--- 
 
 
 ```php
@@ -16,21 +18,21 @@ $publicPath = $keyDir . '/public.pem';
 $privatePath = $keyDir . '/private.pem';
 
 try {
-    // vérification de l'existance des clé 
+    // checking the existence of keys
     if (file_exists($publicPath) && file_exists($privatePath)){
-        echo "chargement...\n";
+        echo "loading...\n";
 
-        // chargement des clées si elle existe
+        // loading keys if they exist
         $publicKey = file_get_contents($publicPath);
         $privateKey = file_get_contents($privatePath);
     }else{
-        echo "génération des clées...\n";
+        echo "generation of keys...\n";
 
-        // génération des clées si elle sont absantes
+        // generation of keys if they are missing
         $keyGen = new RSAKey();
         $keys = $keyGen->generated(1024);
 
-        // sauvgarde des clées
+        // key backup
         $save = new RSASave();
         $save->save_key($keys['public'], $keys['private'], $keyDir);
 
@@ -38,18 +40,18 @@ try {
         $privateKey = $keys['private'];
     }
 
-    // chiffrement déchiffrement 
+    // encryption decryption 
     $rsa = new RSA($publicKey, $privateKey);
-    $encrypted = $rsa->encrypt("Mon message secret");
+    $encrypted = $rsa->encrypt("My secret message");
     echo "Encrypted : $encrypted\n";
 
     $decrypted = $rsa->decrypt($encrypted);
     echo "Decrypted : $decrypted\n";
 
 }catch (CryptoException $e){
-    echo "Erreur Crypto : " . $e->getMessage() . "\n";
+    echo "Error Crypto : " . $e->getMessage() . "\n";
 }catch (\Exception $e){
-    echo "Erreur Générale : " . $e->getMessage() . "\n";
+    echo "General Error : " . $e->getMessage() . "\n";
 }
 
 // php test_rsa.php

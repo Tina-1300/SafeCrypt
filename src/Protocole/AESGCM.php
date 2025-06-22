@@ -57,16 +57,16 @@ class AESGCM{
             throw new CryptoException("Combined data is too short to contain IV and Tag.");
         }
 
-        // Extraction du Tag
+        // Tag Extraction
         $tagBase64 = substr($combinedData, -self::TAG_B64_LEN);
 
-        // Extraction de l'IV
+        // IV Extraction
         $ivBase64 = substr($combinedData, -(self::TOTAL_SUFFIX_LEN), self::IV_B64_LEN);
         
-        // Le reste est le texte chiffré
+        // The rest is the ciphertext
         $ciphertextBase64 = substr($combinedData, 0, -(self::TOTAL_SUFFIX_LEN));
 
-        // Appelle la méthode decrypt existante avec les parties extraites
+        // Calls the existing decrypt method with the extracted parts
         return $this->decrypt($ciphertextBase64, $ivBase64, $tagBase64);
     }
 

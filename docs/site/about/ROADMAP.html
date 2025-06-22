@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tina" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Roadmap - WinSpeak</title>
+    <title>Roadmap - SafeCrypt</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -22,7 +22,7 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/php.min.js"></script>
       <script>hljs.highlightAll();</script> 
 </head>
 
@@ -32,7 +32,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../index.html" class="icon icon-home"> WinSpeak
+          <a href="../index.html" class="icon icon-home"> SafeCrypt
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -42,22 +42,33 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Documentation</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a>
+                <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/rsa.html">RSA</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../features/features.html">Features</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Example</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/rsa.html">RSA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">About</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../announcements.html">Announcements</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="team.html">The team</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribute</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="license.html">Licence</a>
@@ -70,17 +81,25 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Roadmap</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#main-objectives">🚀 Main Objectives</a>
+    <li class="toctree-l2"><a class="reference internal" href="#release-version-v100">✅ Release version: v1.0.0</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#development-plan">📅 ​​Development Plan</a>
+    <li class="toctree-l2"><a class="reference internal" href="#release-version-v110-goal-improved-symmetric-encryption">✅ Release version: v1.1.0 (Goal: Improved symmetric encryption)</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#future-ideas-unplanned">🛤️ Future Ideas (Unplanned)</a>
+    <li class="toctree-l2"><a class="reference internal" href="#current-version-v120-purpose-adding-rsa-asymmetric-encryption">✅ Current version: v1.2.0 – (Purpose: Adding RSA Asymmetric Encryption)</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#how-to-contribute">📢 How to Contribute?</a>
+    <li class="toctree-l2"><a class="reference internal" href="#current-version-v130-addition-of-new-symmetric-protocols">✅ Current version: v1.3.0 – Addition of new symmetric protocols</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-v140-added-new-symmetric-protocols">🚧 Version v1.4.0 – Added new symmetric protocols</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#version-v150-advanced-asymmetric-protocol-and-signatures">🚧 Version v1.5.0 – Advanced Asymmetric Protocol and Signatures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contribute">📌 Contribute</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#automated-tests-todo">🧪 Automated Tests (TODO)</a>
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">FAQ</a>
+                  <li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a>
                   </li>
               </ul>
       </div>
@@ -90,7 +109,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">WinSpeak</a>
+          <a href="../index.html">SafeCrypt</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -107,70 +126,85 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="roadmap-winspeak">📍 Roadmap - WinSpeak</h1>
-<p>Welcome to the official roadmap for the <strong>WinSpeak</strong> project!</p>
-<p>This document describes the planned features, future enhancements, and long-term goals of the project.</p>
+                <h1 id="safecrypt-roadmap">🛡️ SafeCrypt - Roadmap</h1>
+<p>This document describes the features planned for future versions of the SafeCrypt library.</p>
 <hr />
-<h2 id="main-objectives">🚀 Main Objectives</h2>
+<h2 id="release-version-v100">✅ Release version: <code>v1.0.0</code></h2>
 <ul>
-<li>Provide a SOLID C++ library for volume and mute control on Windows.</li>
-<li>Offer a simple, clean, and stable API for interacting with system speakers.</li>
-<li>Ensure excellent compatibility on Windows 10.</li>
-<li>Fully document each feature with examples.</li>
-<li>Maintain a high level of code quality (unit tests, etc.).</li>
+<li>[x] AESGCM message encryption and decryption</li>
+<li>[x] Error handling via the <code>CryptoException</code> class</li>
 </ul>
 <hr />
-<h2 id="development-plan">📅 ​​Development Plan</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Version</th>
-<th style="text-align: left;">Feature</th>
-<th style="text-align: center;">Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">1.0.0</td>
-<td style="text-align: left;">Master Volume Control</td>
-<td style="text-align: center;">✅ Done</td>
-</tr>
-<tr>
-<td style="text-align: left;">1.0.0</td>
-<td style="text-align: left;">is_muted / get_volume / set_volume / set_mute Function</td>
-<td style="text-align: center;">✅ Done</td>
-</tr>
-<tr>
-<td style="text-align: left;">1.1.0</td>
-<td style="text-align: left;">Write Documentation</td>
-<td style="text-align: center;">✅ Done</td>
-</tr>
-<tr>
-<td style="text-align: left;">1.1.0</td>
-<td style="text-align: left;">Refactor all code based on SOLID principles</td>
-<td style="text-align: center;">✅ Done</td>
-</tr>
-<tr>
-<td style="text-align: left;">1.2.0</td>
-<td style="text-align: left;">Support for Controlling Multiple Audio Devices</td>
-<td style="text-align: center;">🔲 To Do</td>
-</tr>
-</tbody>
-</table>
+<h2 id="release-version-v110-goal-improved-symmetric-encryption">✅ Release version: <code>v1.1.0</code> (Goal: Improved symmetric encryption)</h2>
+<ul>
+<li>[x] Added the <code>decryptCombined</code> method to the AESGCM class</li>
+</ul>
 <hr />
-<h2 id="future-ideas-unplanned">🛤️ Future Ideas (Unplanned)</h2>
-<p><strong>be Linux compatible</strong></p>
+<h2 id="current-version-v120-purpose-adding-rsa-asymmetric-encryption">✅ Current version: <code>v1.2.0</code> – (Purpose: Adding RSA Asymmetric Encryption)</h2>
+<ul>
+<li>[x] RSA Encryption (Public/Private Key)</li>
+<li>[x] RSA Key Generation (RSAKey)</li>
+<li>[x] RSA Key Saving/Loading (RSASave/RSALoad)</li>
+<li>[x] RSA Message Encryption &amp; Decryption</li>
+</ul>
 <hr />
-<h2 id="how-to-contribute">📢 How to Contribute?</h2>
-<p>If you would like to suggest a feature or contribute to the roadmap, please open an issue with the <code>enhancement</code> tag.</p>
+<h2 id="current-version-v130-addition-of-new-symmetric-protocols">✅ Current version: <code>v1.3.0</code> – Addition of new symmetric protocols</h2>
+<ul>
+<li>[X] ChaCha20-Poly1305 encryption</li>
+<li>[X] ChaCha20 + Poly1305 MAC implementation</li>
+<li>[X] Documentation<blockquote>
+<p>Fast and secure alternative to AES-GCM, ideal for mobile devices</p>
+</blockquote>
+</li>
+</ul>
 <hr />
-<p>Thank you for your interest in WinSpeak 🚀!</p>
+<h2 id="version-v140-added-new-symmetric-protocols">🚧 Version <code>v1.4.0</code> – Added new symmetric protocols</h2>
+<ul>
+<li>[ ] AES encryption</li>
+<li>[ ] ECB implementation</li>
+<li>[ ] CBC implementation</li>
+<li>[ ] CTR implementation</li>
+</ul>
+<hr />
+<h2 id="version-v150-advanced-asymmetric-protocol-and-signatures">🚧 Version <code>v1.5.0</code> – Advanced Asymmetric Protocol and Signatures</h2>
+<ul>
+<li>[ ] Elliptic Curve Cryptography (ECC)</li>
+<li>[ ] Support for common curves (secp256r1, secp256k1, ed25519)</li>
+<li>
+<p>[ ] Key generation, lightweight encryption, digital signatures</p>
+</li>
+<li>
+<p>[ ] ECDSA (Elliptic Curve Digital Signature Algorithm)</p>
+</li>
+<li>
+<p>[ ] Signature and verification with elliptic curves</p>
+</li>
+<li>
+<p>[ ] EdDSA (Ed25519)</p>
+</li>
+<li>[ ] Modern, fast, secure, and compact signature</li>
+</ul>
+<hr />
+<h2 id="contribute">📌 Contribute</h2>
+<p>Want to help?
+1. Choose a <code>🚧</code> task from the roadmap.
+2. Create a dedicated branch on GitHub with a clear name that matches your task (e.g., <code>feature/chacha20-poly1305</code>, <code>bugfix/aes-gcm-decrypt</code>).
+3. Implement your feature or fix.
+4. Open a Pull Request (PR) from your branch to <code>dev</code> for review.</p>
+<p>Thanks for your contribution! 🚀</p>
+<hr />
+<h2 id="automated-tests-todo">🧪 Automated Tests (TODO)</h2>
+<ul>
+<li>[X] Add PHPUnit tests for all protocols</li>
+<li>[X] Add RSA tests</li>
+<li>[X] Add AES-GCM tests</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="CODE_OF_CONDUCT.html" class="btn btn-neutral float-left" title="Code of conduct"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../FAQ.html" class="btn btn-neutral float-right" title="FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="FAQ.html" class="btn btn-neutral float-right" title="FAQ">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -196,7 +230,7 @@
       <span><a href="CODE_OF_CONDUCT.html" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../FAQ.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="FAQ.html" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

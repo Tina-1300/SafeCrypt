@@ -110,23 +110,9 @@ echo "decrypted data : " . $data_decrypted . PHP_EOL;
 ```
 
 
-
-## 🚀 Use
-
-Here are some code examples for using the different encryption protocols 
-
-
-- **AES-GCM Example**
-    - [AES-GCM File encryption example](./example/File_encryption_example_aes_gcm.md)
-
-- **RSA Example**
-    - [RSA example](./example/RSA_example.md)
-
-
-
 ## 📚 Documentation
 
-Full documentation is available in the docs/ folder or online [https://example](https://www.google.com).
+Full documentation is available in the `docs\` folder or online [https://tina-1300.github.io/documentation/SafeCrypt/index.html](https://tina-1300.github.io/documentation/SafeCrypt/index.html).
 
 ## 🛠️ Contribution
 
@@ -149,6 +135,7 @@ Contributions are welcome! To facilitate the integration of your changes, please
 - Comply with the license policy and avoid including unauthorized third-party code.
 
 Thank you for helping make SafeCrypt better!
+
 
 ## 📄 License
 

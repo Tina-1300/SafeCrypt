@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tina" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Set volume - WinSpeak</title>
+    <title>RSA - SafeCrypt</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Set volume";
-        var mkdocs_page_input_path = "features\\set_volume.md";
+        var mkdocs_page_name = "RSA";
+        var mkdocs_page_input_path = "example\\rsa.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -22,7 +22,7 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/php.min.js"></script>
       <script>hljs.highlightAll();</script> 
 </head>
 
@@ -32,7 +32,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../index.html" class="icon icon-home"> WinSpeak
+          <a href="../index.html" class="icon icon-home"> SafeCrypt
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -42,22 +42,35 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Documentation</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a>
+                <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/rsa.html">RSA</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="features.html">Features</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Example</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">RSA</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">About</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../announcements.html">Announcements</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../about/team.html">The team</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../about/contributing.html">Contribute</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../about/license.html">Licence</a>
@@ -70,7 +83,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../about/ROADMAP.html">Roadmap</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">FAQ</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/FAQ.html">FAQ</a>
                   </li>
               </ul>
       </div>
@@ -80,14 +93,15 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">WinSpeak</a>
+          <a href="../index.html">SafeCrypt</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Set volume</li>
+          <li class="breadcrumb-item">Example</li>
+      <li class="breadcrumb-item active">RSA</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -96,56 +110,67 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="fonction-set_volume">Fonction : <code>set_volume()</code></h2>
-<h3 id="description">Description</h3>
-<p>The volume to define must be a number between 0.0f and 100.0f (inclusive).</p>
-<h3 id="settings">Settings</h3>
-<table>
-<thead>
-<tr>
-<th>Parameter name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>volume</code></td>
-<td><code>float</code></td>
-<td>float value to adjust speaker volume</td>
-</tr>
-</tbody>
-</table>
-<h3 id="returned-value">Returned value</h3>
-<ul>
-<li>Returns <code>true</code> if the volume was correctly modified, <code>false</code> in case of error.</li>
-</ul>
-<h3 id="example-of-use">Example of use</h3>
-<pre><code class="language-cpp">#include &lt;WinSpeak/WinSpeak.hpp&gt;
-#include &lt;WinSpeak/AudioDeviceManager.hpp&gt;
-#include &lt;iostream&gt;
+                <h1 id="rsa-example">RSA Example</h1>
+<hr />
+<pre><code class="language-php">&lt;?php
 
-// g++ -O2 -Wall -Wextra -o test.exe test.cpp -lWinSpeak -lole32 -lstdc++ -luuid
+require_once __DIR__ . '/vendor/autoload.php';
 
+use SafeCrypt\Protocole\RSA;
+use SafeCrypt\Protocole\RSAKey;
+use SafeCrypt\Protocole\RSASave;
+use SafeCrypt\Exceptions\CryptoException;
 
-int main(){
+$keyDir = __DIR__ . '/keys';
+$publicPath = $keyDir . '/public.pem';
+$privatePath = $keyDir . '/private.pem';
 
-    try {
-        WinSpeak::AudioDeviceManager manager;
-        WinSpeak::WinSpeak speaker(&amp;manager);
+try {
+    // checking the existence of keys
+    if (file_exists($publicPath) &amp;&amp; file_exists($privatePath)){
+        echo &quot;loading...\n&quot;;
 
-        std::cout &lt;&lt; (speaker.set_volume(100.0f) ? &quot;Speaker 100%&quot; : &quot;An error has occurred&quot; ) &lt;&lt; &quot;\n&quot;;
+        // loading keys if they exist
+        $publicKey = file_get_contents($publicPath);
+        $privateKey = file_get_contents($privatePath);
+    }else{
+        echo &quot;generation of keys...\n&quot;;
 
-    }catch (const std::exception&amp; e){
-        std::cerr &lt;&lt; &quot;Error : &quot; &lt;&lt; e.what() &lt;&lt; &quot;\n&quot;;
+        // generation of keys if they are missing
+        $keyGen = new RSAKey();
+        $keys = $keyGen-&gt;generated(1024);
+
+        // key backup
+        $save = new RSASave();
+        $save-&gt;save_key($keys['public'], $keys['private'], $keyDir);
+
+        $publicKey = $keys['public'];
+        $privateKey = $keys['private'];
     }
 
-    return 0;
+    // encryption decryption 
+    $rsa = new RSA($publicKey, $privateKey);
+    $encrypted = $rsa-&gt;encrypt(&quot;My secret message&quot;);
+    echo &quot;Encrypted : $encrypted\n&quot;;
+
+    $decrypted = $rsa-&gt;decrypt($encrypted);
+    echo &quot;Decrypted : $decrypted\n&quot;;
+
+}catch (CryptoException $e){
+    echo &quot;Error Crypto : &quot; . $e-&gt;getMessage() . &quot;\n&quot;;
+}catch (\Exception $e){
+    echo &quot;General Error : &quot; . $e-&gt;getMessage() . &quot;\n&quot;;
 }
+
+// php test_rsa.php
 </code></pre>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../api/ChaCha20-Poly1305.html" class="btn btn-neutral float-left" title="ChaCha20-Poly1305"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="aes-gcm.html" class="btn btn-neutral float-right" title="AES-GCM">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -167,6 +192,10 @@ int main(){
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="../api/ChaCha20-Poly1305.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="aes-gcm.html" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

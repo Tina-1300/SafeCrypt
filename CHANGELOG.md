@@ -5,6 +5,15 @@ All notable changes to this project will be documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/)
 and versioning follows [SemVer](https://semver.org/lang/fr/).
 
+
+---
+
+## [1.3.0] - 2025-06-22
+### Added
+- Documentation
+- ChaCha20-Poly1305
+
+
 ---
 
 ## [1.2.0] - 2025-06-15

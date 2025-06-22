@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tina" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Contribute - WinSpeak</title>
+    <title>Contribute - SafeCrypt</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -22,7 +22,7 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/php.min.js"></script>
       <script>hljs.highlightAll();</script> 
 </head>
 
@@ -32,7 +32,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../index.html" class="icon icon-home"> WinSpeak
+          <a href="../index.html" class="icon icon-home"> SafeCrypt
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -42,22 +42,33 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Documentation</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a>
+                <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/rsa.html">RSA</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../features/features.html">Features</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Example</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/rsa.html">RSA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">About</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../announcements.html">Announcements</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="team.html">The team</a>
-                  </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Contribute</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#contribution-process">Contribution Process</a>
@@ -78,7 +89,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="ROADMAP.html">Roadmap</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">FAQ</a>
+                  <li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a>
                   </li>
               </ul>
       </div>
@@ -88,7 +99,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">WinSpeak</a>
+          <a href="../index.html">SafeCrypt</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -105,7 +116,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="contribute-to-winspeak">Contribute to WinSpeak</h1>
+                <h1 id="contribute-to-safecrypt">Contribute to SafeCrypt</h1>
 <p>Thank you for wanting to contribute!</p>
 <h2 id="contribution-process">Contribution Process</h2>
 <ol>
@@ -117,20 +128,20 @@
 </ol>
 <h2 id="coding-rules">Coding Rules</h2>
 <ul>
-<li>Respect the project style (C++ conventions)</li>
+<li>Respect the project style (php conventions)</li>
 <li>One feature = one Pull Request</li>
 <li>Provide unit tests if possible</li>
 </ul>
 <h2 id="standards">Standards</h2>
 <ul>
 <li>Strict adherence to SOLID principles</li>
-<li>Clean code and C++20 minimum</li>
+<li>Clean code</li>
 </ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="team.html" class="btn btn-neutral float-left" title="The team"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../example/ChaCha20-Poly1305.html" class="btn btn-neutral float-left" title="ChaCha20-Poly1305"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="license.html" class="btn btn-neutral float-right" title="Licence">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -154,7 +165,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="team.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../example/ChaCha20-Poly1305.html" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="license.html" style="color: #fcfcfc">Next &raquo;</a></span>

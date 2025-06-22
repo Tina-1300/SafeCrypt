@@ -27,6 +27,6 @@ class RSAKey{
             'public' => $publicKey,
             'private' => $privateKey,
         ];
-    } // génération des clées RSA 
+    } // generation of RSA keys 
 
 }

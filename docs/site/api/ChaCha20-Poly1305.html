@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tina" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Code of conduct - SafeCrypt</title>
+    <title>ChaCha20-Poly1305 - SafeCrypt</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Code of conduct";
-        var mkdocs_page_input_path = "about\\CODE_OF_CONDUCT.md";
+        var mkdocs_page_name = "ChaCha20-Poly1305";
+        var mkdocs_page_input_path = "api\\ChaCha20-Poly1305.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -50,12 +50,22 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">API</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../api/rsa.html">RSA</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="rsa.html">RSA</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../api/aes-gcm.html">AES-GCM</a>
+                  <li class="toctree-l1"><a class="reference internal" href="aes-gcm.html">AES-GCM</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../api/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">ChaCha20-Poly1305</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#main-features">🔐 Main features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#api-classes-and-methods">🧱 API - Classes and Methods</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example">🚀 Example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#safety-notes">⚠️ Safety Notes</a>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Example</span></p>
@@ -68,28 +78,20 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">About</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribute</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/contributing.html">Contribute</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="license.html">Licence</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/license.html">Licence</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="CHANGELOG.html">Changelog</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/CHANGELOG.html">Changelog</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="SECURITY.html">Security</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/SECURITY.html">Security</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Code of conduct</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#our-commitment">Our Commitment</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#our-standards">Our Standards</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#reporting">Reporting</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/CODE_OF_CONDUCT.html">Code of conduct</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="ROADMAP.html">Roadmap</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/ROADMAP.html">Roadmap</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/FAQ.html">FAQ</a>
                   </li>
               </ul>
       </div>
@@ -106,8 +108,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">About</li>
-      <li class="breadcrumb-item active">Code of conduct</li>
+          <li class="breadcrumb-item">API</li>
+      <li class="breadcrumb-item active">ChaCha20-Poly1305</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -116,23 +118,114 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="contributor-code-of-conduct">Contributor Code of Conduct</h1>
-<h2 id="our-commitment">Our Commitment</h2>
-<p>We are committed to providing a friendly, safe, and welcoming environment, regardless of age, body type, disability, ethnicity, etc.</p>
-<h2 id="our-standards">Our Standards</h2>
-<p>Examples of positive behavior:
-- Use welcoming and inclusive language
-- Respect different points of view
-- Accept constructive criticism</p>
-<h2 id="reporting">Reporting</h2>
-<p>If you witness or experience inappropriate behavior, please contact us privately.</p>
-<p>Thank you for contributing to a healthy and respectful project!</p>
+                <h1 id="chacha20-poly1305">ChaCha20-Poly1305</h1>
+<p>SafeCrypt implements the ChaCha20-Poly1305 algorithm, a modern symmetric encryption protocol that provides security, speed, and resistance to side-channel attacks.</p>
+<hr />
+<h2 id="main-features">🔐 Main features</h2>
+<ul>
+<li>key generation</li>
+<li>encryption</li>
+<li>decryption</li>
+<li>Key size support: 256 bits</li>
+</ul>
+<h2 id="api-classes-and-methods">🧱 API - Classes and Methods</h2>
+<table>
+<thead>
+<tr>
+<th>Array</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ChaCha20(string $key)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>generated(int $size)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ChaCha20Load()</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ChaCha20Save()</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Array</th>
+<th>method</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>getCipherMethod()</td>
+<td>returns the encryption method</td>
+</tr>
+<tr>
+<td>1</td>
+<td>encrypt(string $plaintext, string $additionalData = '')</td>
+<td>allows data to be encrypted</td>
+</tr>
+<tr>
+<td>1</td>
+<td>decrypt(string $encryptedMessage, string $additionalData = '')</td>
+<td>allows data to be decrypted</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>2</td>
+<td>generated(int $size)</td>
+<td>allows you to generate a key</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>3</td>
+<td>load_key(string $fileName, string $directory = './keys')</td>
+<td>allows you to load a key</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>4</td>
+<td>save_key(string $key, string $fileName, string $directory = './keys')</td>
+<td>allows you to save a key that has been generated</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">🚀 Example</h2>
+<p>Below I put a link allowing you to look at the code examples : </p>
+<p><a href="../example/ChaCha20-Poly1305.html">example-ChaCha20-Poly1305</a></p>
+<h2 id="safety-notes">⚠️ Safety Notes</h2>
+<ul>
+<li>Never expose the key.</li>
+<li>Always use a unique nonce per encryption.</li>
+<li>AAD ensures metadata integrity.</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="SECURITY.html" class="btn btn-neutral float-left" title="Security"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="ROADMAP.html" class="btn btn-neutral float-right" title="Roadmap">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="aes-gcm.html" class="btn btn-neutral float-left" title="AES-GCM"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../example/rsa.html" class="btn btn-neutral float-right" title="RSA">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -155,10 +248,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="SECURITY.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="aes-gcm.html" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="ROADMAP.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../example/rsa.html" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

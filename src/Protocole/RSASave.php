@@ -7,7 +7,7 @@ use SafeCrypt\Exceptions\CryptoException;
 
 class RSASave{
 
-    // fonction permettant de sauvgarder les clées priver et clé public generer
+    // method to save private keys and generated public key
     public function save_key(string $publicKey, string $privateKey, string $directory = './keys'){
         if (!is_dir($directory)){
             mkdir($directory, 0700, true);

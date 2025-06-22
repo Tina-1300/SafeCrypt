@@ -1,43 +1,60 @@
 site_name: SafeCrypt
+site_description: Official SafeCrypt Documentation
+site_author: Tina
 
-# readthedocs
-#windmill-dark
 theme:
-  name: readthedocs
-  #locale: fr 
-  highlightjs: true
-  hljs_languages:
-    - yaml
-    - php
+    name: readthedocs 
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - php
+    features:
+        - navigation.tabs
+        - content.code.copy
+        - navigation.instant
+        - search.highlight
 
 markdown_extensions:
-  - callouts
-  - github-callouts
+    - callouts
+    - github-callouts
 
 nav:
-  - Welcome: index.md
-  - Documentation:
-      - Installation: installation.md 
-      - Features: features/features.md
-  - About:
-      - Announcements: announcements.md
-      - Contribute: about/contributing.md
-      - Licence: about/license.md
-      - Changelog: about/CHANGELOG.md
-      - Security: about/SECURITY.md
-      - Code of conduct: about/CODE_OF_CONDUCT.md 
-      - Roadmap: about/ROADMAP.md
-      - FAQ: FAQ.md
-# extra_css:
-#   - all.css
-# utiliser l'ors de la compilation et y mettre sur false pour ne pas casses les chemin entre les fichier 
-# et a true pour utiliser le server  
+    - Introduction: index.md
+    - Installation: installation.md
+    - API:
+        - RSA: api/rsa.md
+        - AES-GCM: api/aes-gcm.md
+        - ChaCha20-Poly1305: api/ChaCha20-Poly1305.md
+    - Example:
+        - RSA: example/rsa.md
+        - AES-GCM: example/aes-gcm.md
+        - ChaCha20-Poly1305: example/ChaCha20-Poly1305.md
+    - About:
+        - Contribute: about/contributing.md
+        - Licence: about/license.md
+        - Changelog: about/CHANGELOG.md
+        - Security: about/SECURITY.md
+        - Code of conduct: about/CODE_OF_CONDUCT.md 
+        - Roadmap: about/ROADMAP.md
+        - FAQ: about/FAQ.md
+
 use_directory_urls: true
-#mettre a false pour executer : mkdocs build
-# pour lancer le server sur une ip et un port spécifique : mkdocs serve --dev-addr 192.168.1.188:8000
 
-#pip install mkdocs-windmill-dark
-#pip install markdown-callouts
+# set 'use_directory_urls' to false to execute : mkdocs build
 
+# to launch the server on a specific IP and port : 
+# mkdocs serve --dev-addr 192.168.1.188:8000
+
+
+# Installation
+
+# pip install mkdocs-windmill-dark
+# pip install markdown-callouts
+
+# Themes
+
+# readthedocs
+# windmill-dark
+# etc...
 
 #https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts

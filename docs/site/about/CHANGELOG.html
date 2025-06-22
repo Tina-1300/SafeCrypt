@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Tina" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Changelog - WinSpeak</title>
+    <title>Changelog - SafeCrypt</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -22,7 +22,7 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/php.min.js"></script>
       <script>hljs.highlightAll();</script> 
 </head>
 
@@ -32,7 +32,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../index.html" class="icon icon-home"> WinSpeak
+          <a href="../index.html" class="icon icon-home"> SafeCrypt
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -42,37 +42,60 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Introduction</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Documentation</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a>
+                <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/rsa.html">RSA</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../features/features.html">Features</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Example</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/rsa.html">RSA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/aes-gcm.html">AES-GCM</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../example/ChaCha20-Poly1305.html">ChaCha20-Poly1305</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">About</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../announcements.html">Announcements</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="team.html">The team</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribute</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="license.html">Licence</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Changelog</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#100-2025-04-26">[1.0.0] - 2025-04-26</a>
+    <li class="toctree-l2"><a class="reference internal" href="#130-2025-06-22">[1.3.0] - 2025-06-22</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#added">Added</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#110-2025-05-20">[1.1.0] - 2025-05-20</a>
+    <li class="toctree-l2"><a class="reference internal" href="#120-2025-06-15">[1.2.0] - 2025-06-15</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#added_1">Added</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#110-2025-06-10">[1.1.0] - 2025-06-10</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#added_2">Added</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#100-2025-06-10">[1.0.0] - 2025-06-10</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#added_3">Added</a>
     </li>
         </ul>
     </li>
@@ -84,7 +107,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="ROADMAP.html">Roadmap</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../FAQ.html">FAQ</a>
+                  <li class="toctree-l1"><a class="reference internal" href="FAQ.html">FAQ</a>
                   </li>
               </ul>
       </div>
@@ -94,7 +117,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">WinSpeak</a>
+          <a href="../index.html">SafeCrypt</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -111,30 +134,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="changelog">Changelog</h1>
-<p>All notable changes to this project are documented in this file.</p>
-<p>The format is based on <a href="https://keepachangelog.com/fr/1.0.0/">Keep a Changelog</a>,<br />
-and this project adheres to <a href="https://semver.org/lang/fr/">Semantic Versioning</a>.</p>
+                <h1 id="changelog">📜 Changelog</h1>
+<p>All notable changes to this project will be documented here.</p>
+<p>The format is based on <a href="https://keepachangelog.com/fr/1.0.0/">Keep a Changelog</a>
+and versioning follows <a href="https://semver.org/lang/fr/">SemVer</a>.</p>
 <hr />
-<h2 id="100-2025-04-26">[1.0.0] - 2025-04-26</h2>
+<h2 id="130-2025-06-22">[1.3.0] - 2025-06-22</h2>
 <h3 id="added">Added</h3>
 <ul>
-<li>Creation of the <code>WinSpeak</code> library</li>
-<li>Retrieving speaker volume values</li>
-<li>Changing the master volume</li>
-<li>Speaker muting and unmuting capabilities</li>
-<li>Speaker muting and unmuting functionality</li>
-<li>Clean API based on the <code>ISpeak</code> interface</li>
-<li>Windows implementation using <code>IAudioEndpointVolume</code></li>
-<li>Full adherence to SOLID principles</li>
-<li>Initial documentation</li>
+<li>Documentation</li>
+<li>ChaCha20-Poly1305</li>
 </ul>
-<h2 id="110-2025-05-20">[1.1.0] - 2025-05-20</h2>
+<hr />
+<h2 id="120-2025-06-15">[1.2.0] - 2025-06-15</h2>
 <h3 id="added_1">Added</h3>
 <ul>
-<li>Added official documentation</li>
-<li>Refactor all code based on SOLID principles</li>
+<li>Implementation of the RSA asymmetric encryption protocol</li>
+<li>Key pair generation (<code>RSAKey</code>)</li>
+<li>Encryption, Decryption (<code>RSA</code>)</li>
+<li>Saving and loading keys (<code>RSASave</code>, <code>RSALoad</code>)</li>
 </ul>
+<hr />
+<h2 id="110-2025-06-10">[1.1.0] - 2025-06-10</h2>
+<h3 id="added_2">Added</h3>
+<ul>
+<li>Improvement on <code>AES-256-GCM</code>:</li>
+<li>Added a method to facilitate decryption</li>
+</ul>
+<hr />
+<h2 id="100-2025-06-10">[1.0.0] - 2025-06-10</h2>
+<h3 id="added_3">Added</h3>
+<ul>
+<li>First stable release</li>
+<li>Better error handling via <code>CryptoException</code></li>
+<li>Implementation of the <code>AES-256-GCM</code> symmetric encryption:</li>
+<li>Random AES key generation</li>
+<li>Secure encryption and decryption with IV + tag</li>
+<li>Base64 support for encrypted messages</li>
+</ul>
+<hr />
               
             </div>
           </div><footer>
