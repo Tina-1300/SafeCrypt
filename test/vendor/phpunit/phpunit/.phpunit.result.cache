@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"AESGCMTest::testEncryptDecrypt":0.012,"RSATest::testEncryptDecrypt":0.014}}
+{"version":1,"defects":[],"times":{"AESGCMTest::testEncryptDecrypt":0.044,"RSATest::testEncryptDecrypt":0.006,"ChaCha20Test::testEncryptDecrypt":0.004,"ChaCha20Test::testAuthenticationFailureOnCiphertextTampering":0.003,"ChaCha20Test::testAuthenticationFailureOnAADTtampering":0.001,"ChaCha20Test::testAuthenticationFailureOnTagTampering":0.001,"ChaCha20Test::testKeyLengthValidation":0.005,"ChaCha20Test::testEmptyKeyValidation":0.001}}
